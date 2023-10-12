@@ -1,6 +1,7 @@
 body{
     /* background: url('doreamon3.jpg'); */
-    background-image: linear-gradient(to bottom left, rgb(27, 155, 240), skyblue ,white, skyblue,rgb(27,155,240));
+    background-image: linear-gradient(to left, rgb(27, 155, 240), skyblue ,white, skyblue,rgb(27,155,240));
+    /* background-color: black; */
     margin: 0px;
 }
 nav a img{
@@ -9,14 +10,20 @@ nav a img{
     padding-right: 5px;
 }
 nav{
-    background-color: black;
-    color: white;
+    background-color:transparent;
+    color: black;
     padding: 10px;
+    
+    width: 100%;
+    margin: top 0; 
 }
 nav a{
     padding: 5px;
-    color: white;
+    color: black;
     text-decoration: none;
+}
+nav:hover{
+    border:2px solid black;
 }
 /* img {
     padding-right: 5px;
@@ -43,7 +50,8 @@ nav a{
     height: 85vh;
     width: 70%;
     color: white;
-    background-color: rgb(22, 159, 204);
+    background-color:  rgb(22, 159, 204);
+    /* background-color: white; */
     border: 5px solid black;
     margin: auto;
     border-radius: 20px;

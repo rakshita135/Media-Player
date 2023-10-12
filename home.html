@@ -18,14 +18,23 @@ nav a img{
     padding-right: 5px;
 }
 nav{
-    background-color: black;
+    /* background-color: black; */
     color: white;
     padding: 10px;
+    position: fixed;
+    width: 100%;
+}
+nav:hover{
+    /* border:2px solid white; */
 }
 nav a{
     padding: 5px;
     color: white;
     text-decoration: none;
+}
+nav a:hover{
+    color: white;
+    text-decoration: underline;
 }
 #container{
     background: url('concert2.jpeg');
@@ -42,34 +51,41 @@ nav a{
     flex-direction: column;
 
 }
-.btn{
+.butns{
     width: 200px;
     margin: 20px;
+}
+.register{
+    margin-right: 10px;
 }
 </style>
 <body>
     <nav>
-        <a ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1982px-Spotify_icon.svg.png">Spotify</a>
+        <a ><img src="https://play-lh.googleusercontent.com/NKNTBKRSFyWI25H50UEY_7w7NoBFvqcicq_bdPOWBvV-Kx1qtYB15d0kFhvMEEA4ZQ">Music-Player</a>
         
         <a href="home.html">Home</a>
-        <a href="">Search</a>
+        <a href="search.html">Search</a>
         <a href="My Music.html">My Playlist</a>
+        <a><button type="button" class="btn btn-outline-light register" onclick="login()">Login</button></a>
+        <a><button type="button" class="btn btn-outline-light register" onclick="signin()">Sign in</button></a>
+        
     </nav>
     <div id="container">
 <div id="btn1" class="btns">
-    <button type="button" class="btn btn-outline-light">BollyWood</button>
-    <button type="button" class="btn btn-outline-light">90's Melodies</button>
-    <button type="button" class="btn btn-outline-light">Old Songs</button>
-    <button type="button" class="btn btn-outline-light">Romantic</button>
-    <button type="button" class="btn btn-outline-light">Energetic</button>
+    <a href="bollywood.html" target="_blank"><button type="button" class="btn btn-outline-light butns">BollyWood</button></a>
+    <button type="button" class="btn btn-outline-light butns">90's Melodies</button>
+    <button type="button" class="btn btn-outline-light butns">Old Songs</button>
+    <button type="button" class="btn btn-outline-light butns">Romantic</button>
+    <button type="button" class="btn btn-outline-light butns">Energetic</button>
 </div>
 <div id="btn2" class="btns">
-    <button type="button" class="btn btn-outline-light">Peaceful</button>
-    <button type="button" class="btn btn-outline-light">Patriotic</button>
-    <button type="button" class="btn btn-outline-light">Bhakti</button>
-    <button type="button" class="btn btn-outline-light">Garba</button>
-    <button type="button" class="btn btn-outline-light">Party</button>
+    <button type="button" class="btn btn-outline-light butns">Peaceful</button>
+    <button type="button" class="btn btn-outline-light butns">Patriotic</button>
+    <a href="My Music.html"><button type="button" class="btn btn-outline-light butns">Cartoon</button></a>
+    <a href="garba.html"><button type="button" class="btn btn-outline-light butns">Garba</button></a>
+    <button type="button" class="btn btn-outline-light butns">Party</button>
 </div>
     </div>
 </body>
+<script src="home.js"></script>
 </html>

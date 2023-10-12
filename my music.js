@@ -14,9 +14,24 @@ let songs = [
     {songName: "Mai hu Jiyaan..", songPath:"mai hoon jiyan.mp3", coverPath:"https://i0.wp.com/www.returngiftwala.com/wp-content/uploads/2023/06/3-10.jpg?ssl=1"},
     {songName: "Jeene ka sahi dhang..", songPath:"Jeene Ka Sahi Dhang ! Doremon Song.mp3", coverPath:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjqWORDyx4u3OL-vSK-UjZFPi00xCocU3CSQ&usqp=CAU"},
     {songName: "Sabse pehle hai pyaar..", songPath:"Sabse-Pehle-Hai-Pyar-Doraemon.mp3", coverPath:"https://m.media-amazon.com/images/M/MV5BYjY0MGNiM2QtY2Q3Ny00MzNkLWExODgtMmZhYzQ4NDA3YTkyXkEyXkFqcGdeQXVyOTc5MDI5NjE@._V1_.jpg"},
+
 ]
 
+// SongItems.forEach((element,i)=>{
+//     element.getElementsByTagName("img")[0].src = songs[i].coverPath;
+//     element.getElementsByClassName("songName")[0].innerHTML = songs[i].songName;
+// })
+let data="";
+songs.map((display)=>{
+data += `<div class="num1">
 
+<img src="${display.coverPath}" alt="" id="img1">
+<span class="songName">${display.songName}</span>
+<span id="song1"><span></span><i class="fa songItemPlay fa-play" id="1"  style="font-size:24px;color:black"></i></span>
+</div>`
+
+})
+document.getElementById("playlist").innerHTML= data;
 audioElement.src = songs[index-1].songPath;  //down palate par first song sabse pehle play karne ke liye
 
 //down palate  play and pause audio manage
@@ -55,10 +70,6 @@ myprogress.addEventListener('change', ()=>{//song seek bar se aage badane ke liy
     audioElement.currentTime= parseInt((myprogress.value * audioElement.duration)/100);
 })
 
-SongItems.forEach((element,i)=>{
-    element.getElementsByTagName("img")[0].src = songs[i].coverPath;
-    element.getElementsByClassName("songName")[0].innerHTML = songs[i].songName;
-})
 
 function makeallplay(){
     Array.from(document.getElementsByClassName("songItemPlay")).forEach((element)=>{
